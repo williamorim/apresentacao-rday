@@ -1,0 +1,275 @@
+---
+title: "R day - Tutorial"
+subtitle: "Introdução ao Shiny"
+author: "William Amorim <br> williamorim@curso-r.com"
+date: "22/05/2018"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Sobre mim
+
+<img src="img/william.jpg" style="position: fixed; top: 200px; left: 20px; z-index: 1" width="300px">
+
+<div style="position: fixed; top: 230px; left: 360px; width: 450px; z-index: 1">
+<lu>
+  <li> Bacharel, Mestre e doutorando em Estatística pelo IME-USP </li>
+  <br>
+  <li> Pesquisa em poluição do ar </li>
+  <br>
+  <li> Sócio-fundador da Curso-R </li>
+  <br>
+  <li> Programador em R </li>
+</lu>
+</div>
+
+--
+
+<img src="img/taca.jpg" style="position: fixed; top: 520px; left: 75px; z-index: 1;" width="200px">
+
+--
+
+<img src="img/rpollution.png" style="position: fixed; top: 450px; left: 340px; z-index: 1;" width="200px">
+
+--
+
+<img src="img/cursor.png" style="position: fixed; top: 460px; left: 580px; z-index: 1">
+
+--
+
+<img src="img/rstudio.png" style="position: fixed; top: 30px; left: 238px; z-index: 0" width = "600px">
+
+---
+
+# Sumário
+
+- O que é o shiny?
+
+- Como funciona?
+
+- Interface de usuário
+
+- Input e Outputs
+
+- Server
+
+- Compartilhando
+
+---
+
+# Ciclo da ciência de dados
+
+<br>
+<br>
+<br>
+
+```{r, fig.align='center'}
+knitr::include_graphics("https://raw.githubusercontent.com/hadley/r4ds/master/diagrams/data-science.png")
+```
+
+---
+
+## O que é o Shiny?
+
+- Sistema para desenvolvimento de aplicações web usando o R.
+
+- Um pacote de R (`shiny`).
+
+- Um servidor web (`shiny server`).
+
+---
+
+## O que o Shiny não é?
+
+- O Shiny **não** é uma página web.
+
+- O Shiny **não** é um substituto para sistemas mais gerais, como Ruby on Rails e Django.
+
+- O Shiny **não** é uma ferramenta gerencial, como o Tableau.
+---
+
+## Tutorial completo do RStudio sobre Shiny
+
+- Tutorial: https://shiny.rstudio.com/tutorial/
+
+- Exemplos: https://shiny.rstudio.com/gallery/
+
+<br>
+<br>
+
+<img src="img/cats/cat_book.gif" style=" display: block; margin-left: auto; margin-right: auto;">
+
+---
+
+## Como funciona?
+
+![](img/Img_1.jpg)
+---
+
+## Template
+
+![](img/Img_2.jpg)
+
+
+* **ui** - constrói a interface do usuário, isto é, a **arquitetura** da página.  
+
+* **server** - constrói os objetos apresentados ao usuário.
+
+---
+
+## Exemplo 1
+
+Vamos para o R!
+
+<br>
+<br>
+
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300">
+
+
+---
+ 
+## Inputs e Outputs
+
+<br>
+
+**Inputs** são widgets que possibilitam a interação do usuário com o App.  
+
+**Outputs** são a resposta do app às ações exercidas pelo usuário.
+
+<br>
+<br>
+
+Um app pode ter vários inputs e outputs.
+
+---
+
+## Funções inputs
+
+![](img/Img_3.jpg)
+---
+
+## Sintaxe
+
+![](img/Img_4.jpg)
+
+---
+
+## Funções Outputs
+
+![](img/Img_5.jpg)
+
+---
+
+## Sintaxe
+
+![](img/Img_6.jpg)
+
+---
+
+## Recapitulando
+
+
+![](img/Img_7.jpg)
+
+---
+
+## Exemplo 2
+
+Ao R!
+
+<br>
+<br>
+
+<img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300">
+
+
+
+---
+
+## Server.R
+
+<br>
+<br>
+
+Para a construção da função `server()`, precisamos seguir 3 regras.
+
+---
+
+## Regras da função server()
+
+![](img/Img_8.jpg)
+
+---
+
+## Regras da função server()
+
+![](img/Img_11.jpg)
+
+
+---
+
+## Funções render*()
+
+![](img/Img_9.jpg)
+
+---
+
+## Sintaxe
+
+![](img/Img_10.jpg)
+
+---
+
+## Recapitulando
+
+![](img/Img_12.jpg)
+
+---
+
+## Compartilhando seu app
+
+Todo aplicativo Shiny é alimentado por um computador rodando R.
+
+![](img/Img_1.jpg)
+
+---
+
+## Compartilhando seu app
+  
+Dentro do server:
+
+1. Um diretório contendo tudo o que seu app utiliza (datasets, imagens etc).
+
+2. O código em R que gera seu app (app.R).
+
+Opções:
+
+* [Shiny server](https://www.rstudio.com/products/shiny/shiny-server/): programa backend gratuito que monta um servidor web em linux feito para hospedar aplicativos em Shiny.
+
+* [Shiny Server Pro](https://www.rstudio.com/products/shiny-server-pro/): disponibiliza ferramentas de segurança, performance, gerencialmente e suporte.
+
+* [shinyapps.io](http://www.shinyapps.io/): sistema do RStudio para a hospedagem de aplicativos em Shiny.
+
+* [Now](http://curso-r.com/blog/2018/03/05/2018-03-05-shiny-now/): sistema que permite a hospedagem de aplicativos feitos com [Docker](https://www.docker.com/).
+
+---
+
+## Exemplo 3 e 4: DT e plotly
+
+R!
+
+<br>
+<br>
+
+<img src="img/cats/cat_pc.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300">

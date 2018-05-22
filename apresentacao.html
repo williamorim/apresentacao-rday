@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R day - Tutorial</title>
+    <meta charset="utf-8">
+    <meta name="author" content="William Amorim   williamorim@curso-r.com" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# R day - Tutorial
+## Introdução ao Shiny
+### William Amorim <br> <a href="mailto:williamorim@curso-r.com">williamorim@curso-r.com</a>
+### 22/05/2018
+
+---
+
+
+
+
+# Sobre mim
+
+&lt;img src="img/william.jpg" style="position: fixed; top: 200px; left: 20px; z-index: 1" width="300px"&gt;
+
+&lt;div style="position: fixed; top: 230px; left: 360px; width: 450px; z-index: 1"&gt;
+&lt;lu&gt;
+  &lt;li&gt; Bacharel, Mestre e doutorando em Estatística pelo IME-USP &lt;/li&gt;
+  &lt;br&gt;
+  &lt;li&gt; Pesquisa em poluição do ar &lt;/li&gt;
+  &lt;br&gt;
+  &lt;li&gt; Sócio-fundador da Curso-R &lt;/li&gt;
+  &lt;br&gt;
+  &lt;li&gt; Programador em R &lt;/li&gt;
+&lt;/lu&gt;
+&lt;/div&gt;
+
+--
+
+&lt;img src="img/taca.jpg" style="position: fixed; top: 520px; left: 75px; z-index: 1;" width="200px"&gt;
+
+--
+
+&lt;img src="img/rpollution.png" style="position: fixed; top: 450px; left: 340px; z-index: 1;" width="200px"&gt;
+
+--
+
+&lt;img src="img/cursor.png" style="position: fixed; top: 460px; left: 580px; z-index: 1"&gt;
+
+--
+
+&lt;img src="img/rstudio.png" style="position: fixed; top: 30px; left: 238px; z-index: 0" width = "600px"&gt;
+
+---
+
+# Sumário
+
+- O que é o shiny?
+
+- Como funciona?
+
+- Interface de usuário
+
+- Input e Outputs
+
+- Server
+
+- Compartilhando
+
+---
+
+# Ciclo da ciência de dados
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="https://raw.githubusercontent.com/hadley/r4ds/master/diagrams/data-science.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+## O que é o Shiny?
+
+- Sistema para desenvolvimento de aplicações web usando o R.
+
+- Um pacote de R (`shiny`).
+
+- Um servidor web (`shiny server`).
+
+---
+
+## O que o Shiny não é?
+
+- O Shiny **não** é uma página web.
+
+- O Shiny **não** é um substituto para sistemas mais gerais, como Ruby on Rails e Django.
+
+- O Shiny **não** é uma ferramenta gerencial, como o Tableau.
+---
+
+## Tutorial completo do RStudio sobre Shiny
+
+- Tutorial: https://shiny.rstudio.com/tutorial/
+
+- Exemplos: https://shiny.rstudio.com/gallery/
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="img/cats/cat_book.gif" style=" display: block; margin-left: auto; margin-right: auto;"&gt;
+
+---
+
+## Como funciona?
+
+![](img/Img_1.jpg)
+---
+
+## Template
+
+![](img/Img_2.jpg)
+
+
+* **ui** - constrói a interface do usuário, isto é, a **arquitetura** da página.  
+
+* **server** - constrói os objetos apresentados ao usuário.
+
+---
+
+## Exemplo 1
+
+Vamos para o R!
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300"&gt;
+
+
+---
+ 
+## Inputs e Outputs
+
+&lt;br&gt;
+
+**Inputs** são widgets que possibilitam a interação do usuário com o App.  
+
+**Outputs** são a resposta do app às ações exercidas pelo usuário.
+
+&lt;br&gt;
+&lt;br&gt;
+
+Um app pode ter vários inputs e outputs.
+
+---
+
+## Funções inputs
+
+![](img/Img_3.jpg)
+---
+
+## Sintaxe
+
+![](img/Img_4.jpg)
+
+---
+
+## Funções Outputs
+
+![](img/Img_5.jpg)
+
+---
+
+## Sintaxe
+
+![](img/Img_6.jpg)
+
+---
+
+## Recapitulando
+
+
+![](img/Img_7.jpg)
+
+---
+
+## Exemplo 2
+
+Ao R!
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300"&gt;
+
+
+
+---
+
+## Server.R
+
+&lt;br&gt;
+&lt;br&gt;
+
+Para a construção da função `server()`, precisamos seguir 3 regras.
+
+---
+
+## Regras da função server()
+
+![](img/Img_8.jpg)
+
+---
+
+## Regras da função server()
+
+![](img/Img_11.jpg)
+
+
+---
+
+## Funções render*()
+
+![](img/Img_9.jpg)
+
+---
+
+## Sintaxe
+
+![](img/Img_10.jpg)
+
+---
+
+## Recapitulando
+
+![](img/Img_12.jpg)
+
+---
+
+## Compartilhando seu app
+
+Todo aplicativo Shiny é alimentado por um computador rodando R.
+
+![](img/Img_1.jpg)
+
+---
+
+## Compartilhando seu app
+  
+Dentro do server:
+
+1. Um diretório contendo tudo o que seu app utiliza (datasets, imagens etc).
+
+2. O código em R que gera seu app (app.R).
+
+Opções:
+
+* [Shiny server](https://www.rstudio.com/products/shiny/shiny-server/): programa backend gratuito que monta um servidor web em linux feito para hospedar aplicativos em Shiny.
+
+* [Shiny Server Pro](https://www.rstudio.com/products/shiny-server-pro/): disponibiliza ferramentas de segurança, performance, gerencialmente e suporte.
+
+* [shinyapps.io](http://www.shinyapps.io/): sistema do RStudio para a hospedagem de aplicativos em Shiny.
+
+* [Now](http://curso-r.com/blog/2018/03/05/2018-03-05-shiny-now/): sistema que permite a hospedagem de aplicativos feitos com [Docker](https://www.docker.com/).
+
+---
+
+## Exemplo 3 e 4: DT e plotly
+
+R!
+
+&lt;br&gt;
+&lt;br&gt;
+
+&lt;img src="img/cats/cat_pc.gif" style=" display: block; margin-left: auto; margin-right: auto;" width = "300" height = "300"&gt;
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
